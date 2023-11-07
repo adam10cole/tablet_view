@@ -1,0 +1,118 @@
+.header{
+    background-color: #36383F;
+    box-shadow: 1px 1px 5px 0px #85888C;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.current{
+    background-color: #4F5454;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+
+.logo{
+    display: inline-block;
+    color: #f9f9f9;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #36383F;
+    overflow: hidden;
+}
+
+.menu a{
+    display: block;
+    padding: 30px;
+    color: #f9f9f9;
+}
+.menu a:hover{
+    background-color: #85888C;
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+    background-color: #36383F;
+}
+
+/* Hamburger icon animation used with rights from W3schools */
+/* https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/ */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line {
+    background: #f9f9f9;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background: #f9f9f9;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+
+@media (min-width: 768px) {
+    .nav{
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content;
+        background-color: transparent;
+    }
+    .menu li{
+        float: left;
+    }
+    .menu a:hover{
+        background-color: transparent;
+        color: #85888C;
+
+    }
+
+    .hamb{
+        display: none;
+    }
+}

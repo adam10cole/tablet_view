@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden{
+    position: absolute;
+    left: -300px; 
+    background-color: lightblue;
+    border: 4px solid darkblue;
+    font-size: 30px;
+    text-align: center;
+}
+.hidden:focus {
+    left: calc(20vw); 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6; 
+    background-color: #ebfffd;
+}
+
+.main-row {
+    padding-top: 10px;
+    margin-bottom: 20px; 
+}
+.inner-row1{
+    padding: 10px;
+    display: flex;
+}
+.inner-row1, .inner-row2 {
+    display: flex;
+    flex: 1; 
+    margin-bottom: 10px; 
+}
+
+.inner-row1 .left {
+    flex: 60%;
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    margin-right: 10px;
+    padding: 20px;
+}
+.inner-row1 .right {
+    flex: 40%;
+    background-color: lightblue;
+    border: 2px solid darkblue;
+    padding: 10px;
+}
+
+.inner-row2 {
+    flex-wrap: wrap;
+}
+.grid-cell {
+    flex-basis: 50%;
+    flex-grow: 1; 
+    padding: 10px;
+}
+
+h2{
+    font-size: 40px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center;
+}
+
+.inner-row2 img {
+    height: 325px
+}
+
+h3{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+
+h4{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+}
+ul {
+    padding-left: 10px;
+}
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
+    padding-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+p{
+    text-align: center;
+    padding: 5px;
+}
+.topimg {
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    width: 100%;  
+    height: 200px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    background-color: black;
+}
+.prague{
+    background-image: url('../images/prague_one.webp');
+}
+.ok{
+    background-image: url('../images/safari_lodge.webp');
+}
+.paris{
+    background-image: url('../images/paris_daytime.jpg');
+}
+.zermatt{
+    background-image: url('../images/geneva_to_zermatt.jpeg');
+}
+.florence{
+    background-image: url('../images/florence.jpeg');
+}
+.dubai{
+    background-image: url('../images/dubai_dusk.jpg');
+}
+.location-text {
+    color: white;
+    font-size: 5rem; 
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);  
+}
+
+b{
+    font-weight: bold;
+}
+
+.animate:hover{
+    animation-duration: 1.2s;
+    animation-name: rotate; 
+    animation-iteration-count: 1;
+}
+.pagenav{
+    display: none;
+}
+.pagenav {
+    display:inline;      
+    text-align: center;
+}
+#pagemenu li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+#pagemenu li:hover{
+    background-color: #85888C;
+
+}
+
+@keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+@media (prefers-reduced-motion) {
+    .image:hover{
+        animation-duration: 0s;
+        animation-name: none; 
+    }
+    .gif{
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .inner-row1 {
+        flex-direction: column;
+    }
+    .inner-row1 .left{
+        margin-bottom: 20px;
+        text-align: center;
+        margin-right: 0px;
+    }
+    .pagenav{
+        display: none;
+    }
+}
